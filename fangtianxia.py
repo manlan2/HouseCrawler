@@ -28,8 +28,41 @@ def spider_1(url):
 
 # 循环，把第2-100页全部爬下来
 page = 1
-while page < 1:
+while page < 50:
     #url = 'http://esf.km.fang.com/house/i3'+str(page+1)
-    url = 'http://esf.km.fang.com/house/t21-h316-i3'+str(page+1)
+    #url = 'http://esf.km.fang.com/house/t21-h316-i3'+str(page+1)
+    url = 'http://esf.km.fang.com/house/c280-d2200-j290-k2150-t21-h316-i3'+str(page+1)+'-l3110'
     spider_1(url)
     page = page + 1
+
+'''
+def Pages():
+# 循环，把第2-100页全部爬下来
+    page = 1
+    a = {}
+    while page < 1:
+    #url = 'http://esf.km.fang.com/house/i3'+str(page+1)
+    #毛坯+最新
+    #url = 'http://esf.km.fang.com/house/t21-h316-i3'+str(page+1)
+        url = 'http://esf.km.fang.com/house/c280-d2200-j290-k2150-t21-h316-i3'+str(page+1)+'-l3110'
+        a = spider_1(url)
+        page = page + 1
+    print(a)
+    return a
+
+# 循环，把第2-100页全部爬下来
+page = 1
+while page < 10:
+    #url = 'http://esf.km.fang.com/house/i3'+str(page+1)
+    #毛坯+最新
+    #url = 'http://esf.km.fang.com/house/t21-h316-i3'+str(page+1)
+    url = 'http://esf.km.fang.com/house/c280-d2200-j290-k2150-t21-h316-i3'+str(page+1)+'-l3110'
+    #a = spider_1(url)
+    spider_1(url)
+    page = page + 1
+
+    csvFile3 = open('csvFile3.txt','a', newline='',encoding='gb18030')
+    print(a)
+    csvFile3.writelines(str(a))
+    csvFile3.close()
+'''
